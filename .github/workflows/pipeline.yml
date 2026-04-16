@@ -47,6 +47,9 @@ jobs:
       - name: Build application
         run: npm run build
 
+      - name: Create index.html from fallback
+        run: cp ./build/200.html ./build/index.html
+
       - name: Deploy build to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

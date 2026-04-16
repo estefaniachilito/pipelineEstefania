@@ -7,7 +7,10 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: '200.html'
-		})
+		}),
+		prerender: {
+			entries: ['/']
+		}
 	}
 };
 
