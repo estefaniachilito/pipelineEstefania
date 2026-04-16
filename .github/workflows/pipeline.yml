@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   build:
     name: Build
@@ -31,8 +35,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -53,4 +55,3 @@ jobs:
           publish_branch: gh-pages
           user_name: github-actions
           user_email: github-actions@github.com
-          clean: true
